@@ -1,5 +1,4 @@
-﻿using Online_hardware_store.Pages.GeneralPages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Online_hardware_store
+namespace Online_hardware_store.Pages.GeneralPages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageTopPanel.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageTopPanel : Page
     {
-        public MainWindow()
+        public PageTopPanel()
         {
             InitializeComponent();
-            frameTopPanel.Navigate(new PageTopPanel());
+        }
+
+        private void ComboBoxForCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

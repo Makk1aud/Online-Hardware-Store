@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_hardware_store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" 
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Frame Name="frameTopPanel" 
+               Grid.Row="0" 
+               Grid.ColumnSpan="2"
+               NavigationUIVisibility="Hidden"/>
+        <Frame Name="frameLeftPanel"
+               Grid.Row="1"
+               Grid.RowSpan="3"/>
+        <Frame Name="frameNewsPanel"
+               Grid.Row="1"
+               Grid.Column="2"/>
+        <Frame Name="frameCompaniesPanel"
+               Grid.Row="2"
+               Grid.Column="1"/>
+        <Frame Name="frameRecentlyChoosen"
+               Grid.Row="3"
+               Grid.Column="1"/>
     </Grid>
 </Window>
