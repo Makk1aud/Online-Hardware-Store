@@ -26,6 +26,7 @@ namespace Online_hardware_store
         {
             InitializeComponent();
             frameTopPanel.Navigate(new PageTopPanel());
+
         }
     }
 }
