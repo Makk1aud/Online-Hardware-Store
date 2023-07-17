@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Online_hardware_store.DataApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace Online_hardware_store.Pages.GeneralPages
         public PageListManufacturies()
         {
             InitializeComponent();
+            ListBoxManufac.ItemsSource = DBInteractClass.DbPullTable("Select * from manufacturies").CreateDataReader();
+            ListBoxManufac.DisplayMemberPath = "manufac_name";
+            ListBoxManufac.SelectedValuePath = "id";
+            
         }
     }
 }

@@ -43,17 +43,20 @@ namespace Online_hardware_store.DataApp
 
         public static DataTable DbPullTable(string query)
         {
+            
             con.Open();
             try
             {
                 var adapter = new MySqlDataAdapter(query, con);
                 var table = new DataTable();
                 adapter.Fill(table);
+                con.Close();
                 return table;
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                con.Close();
                 return null;
             }
         }
