@@ -29,5 +29,10 @@ namespace Online_hardware_store.Pages.GeneralPages
         {
 
         }
+
+        private void ButtonMainPage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
