@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Online_hardware_store.DataApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,15 @@ namespace Online_hardware_store.Pages.GeneralPages
         public PageLeftPanel()
         {
             InitializeComponent();
+            ListBoxCompanyTabs.ItemsSource = DBInteractClass.DbPullTable("select * from main_categories").CreateDataReader();
+            ListBoxCompanyTabs.DisplayMemberPath = "main_cat_name";
+            ListBoxCompanyTabs.SelectedValuePath = "id";
+            
+        }
+
+        private void ListBoxCompanyTabs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MessageBox.Show(ListBoxCompanyTabs.SelectedValue.ToString());
         }
     }
 }

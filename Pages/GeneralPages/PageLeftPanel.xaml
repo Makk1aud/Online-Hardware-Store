@@ -12,7 +12,8 @@
         <StackPanel HorizontalAlignment="Left"
                     VerticalAlignment="Top">
             <ListBox Name="ListBoxCompanyTabs"
-                     FontSize="16pt"/>
+                     FontSize="16pt"
+                     SelectionChanged="ListBoxCompanyTabs_SelectionChanged"/>
         </StackPanel>
     </Grid>
 </Page>

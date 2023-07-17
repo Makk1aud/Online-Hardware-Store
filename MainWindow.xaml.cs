@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using Online_hardware_store.DataApp;
 
 namespace Online_hardware_store
 {
@@ -26,7 +27,7 @@ namespace Online_hardware_store
         {
             InitializeComponent();
             frameTopPanel.Navigate(new PageTopPanel());
-
+            frameLeftPanel.Navigate(new PageLeftPanel());
         }
     }
 }
