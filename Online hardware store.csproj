@@ -113,6 +113,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\GeneralPages\PageListManufacturies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\GeneralPages\PageTopPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +125,9 @@
   <ItemGroup>
     <Compile Include="Pages\GeneralPages\PageLeftPanel.xaml.cs">
       <DependentUpon>PageLeftPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GeneralPages\PageListManufacturies.xaml.cs">
+      <DependentUpon>PageListManufacturies.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\GeneralPages\PageTopPanel.xaml.cs">
       <DependentUpon>PageTopPanel.xaml</DependentUpon>

@@ -25,7 +25,7 @@
                NavigationUIVisibility="Hidden"/>
         <Frame Name="frameLeftPanel"
                Grid.Row="1"
-               Grid.RowSpan="3"/>
+               Grid.RowSpan="2"/>
         <Frame Name="frameNewsPanel"
                Grid.Row="1"
                Grid.Column="2"/>
