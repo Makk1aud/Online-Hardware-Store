@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using MySql.Data.MySqlClient;
 
 namespace Online_hardware_store.DataApp
@@ -59,6 +62,12 @@ namespace Online_hardware_store.DataApp
                 con.Close();
                 return null;
             }
+        }
+
+        public static void FillingElement(Selector element, string memberPath, string valuePath)
+        {
+            element.DisplayMemberPath = memberPath;
+            element.SelectedValuePath = valuePath;
         }
     }
 }

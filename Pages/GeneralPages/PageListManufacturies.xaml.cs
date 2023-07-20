@@ -25,9 +25,7 @@ namespace Online_hardware_store.Pages.GeneralPages
         {
             InitializeComponent();
             ListBoxManufac.ItemsSource = DBInteractClass.DbPullTable("Select * from manufacturies").CreateDataReader();
-            ListBoxManufac.DisplayMemberPath = "manufac_name";
-            ListBoxManufac.SelectedValuePath = "id";
-            
+            DBInteractClass.FillingElement(ListBoxManufac, "manufac_name", "id");
         }
     }
 }
