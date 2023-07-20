@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Online_hardware_store.DataApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,11 @@ namespace Online_hardware_store.Pages.GeneralPages
         private void ButtonMainPage_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ButtonMainPage_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainWindowClass.mainWindow.Show();
         }
     }
 }

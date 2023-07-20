@@ -1,4 +1,5 @@
 ﻿using Online_hardware_store.DataApp;
+using Online_hardware_store.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,10 @@ namespace Online_hardware_store.Pages.GeneralPages
 
         private void ListBoxCompanyTabs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show(ListBoxCompanyTabs.SelectedValue.ToString());
+            var newWindow = new SubcategoriesWindow((int)ListBoxCompanyTabs.SelectedValue);
+            newWindow.Show();
+            MainWindowClass.mainWindow.Owner = newWindow;
+            MainWindowClass.mainWindow.Close();
         }
     }
 }

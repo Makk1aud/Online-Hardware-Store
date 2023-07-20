@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Online_hardware_store.Pages.GeneralPages;
+using Online_hardware_store.Pages.SubcategoriesWindowPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,11 @@ namespace Online_hardware_store.Windows
     /// </summary>
     public partial class SubcategoriesWindow : Window
     {
-        public SubcategoriesWindow()
+        public SubcategoriesWindow(int mainCategoryId)
         {
             InitializeComponent();
+            frameTopPanel.Navigate(new PageTopPanel());
+            frameSubcategories.Navigate(new SubcategoriesPage(mainCategoryId));
         }
     }
 }

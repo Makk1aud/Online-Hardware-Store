@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Online_hardware_store.DataApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace Online_hardware_store.Pages.SubcategoriesWindowPages
     /// </summary>
     public partial class SubcategoriesPage : Page
     {
-        public SubcategoriesPage()
+        public SubcategoriesPage(int mainCategoryId)
         {
             InitializeComponent();
+            ListBoxSubcategories.ItemsSource = DBInteractClass.DbPullTable($"select * from subcategories where maincat_id = {mainCategoryId}").CreateDataReader();
+            DBInteractClass.FillingElement(ListBoxSubcategories, "subcat_name", "id");
         }
     }
 }

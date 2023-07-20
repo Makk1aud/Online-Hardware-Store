@@ -40,7 +40,8 @@
                 <TextBlock Name="ButtonMainPage"
                     Text="На главную"
                         FontSize="18pt"
-                        Margin="10"/>
+                        Margin="10"
+                        PreviewMouseDown="ButtonMainPage_PreviewMouseDown"/>
                 <TextBox Name="TextBoxSearcher"
                          Height="30"
                          Width="300"
