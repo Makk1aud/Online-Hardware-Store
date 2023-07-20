@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using Online_hardware_store.DataApp;
 using Online_hardware_store.Pages.MainScreenPages;
-using Online_hardware_store.Windows;
+
 
 namespace Online_hardware_store
 {
@@ -32,9 +32,7 @@ namespace Online_hardware_store
             frameLeftPanel.Navigate(new PageLeftPanel());
             frameCompaniesPanel.Navigate(new PageListManufacturies());
             frameNewsPanel.Navigate(new PageNewsPanel());
-            var window = new NewWindow();
-            window.Show();
-            this.Hide();
+            
         }
     }
 }

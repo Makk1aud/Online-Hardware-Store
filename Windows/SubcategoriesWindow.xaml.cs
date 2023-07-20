@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Online_hardware_store.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для NewWindow.xaml
+    /// Логика взаимодействия для SubcategoriesWindow.xaml
     /// </summary>
-    public partial class NewWindow : Window
+    public partial class SubcategoriesWindow : Window
     {
-        public NewWindow()
+        public SubcategoriesWindow()
         {
             InitializeComponent();
         }
