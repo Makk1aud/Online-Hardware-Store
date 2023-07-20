@@ -96,6 +96,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\WindowClass.cs" />
+    <Compile Include="Windows\SubcategoriesWindow.xaml.cs">
+      <DependentUpon>SubcategoriesWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -123,6 +126,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainScreenPages\PageNewsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SubcategoriesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Pages\SubcategoriesWindowPages\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\News Panel Images\VKImage.jpg" />
