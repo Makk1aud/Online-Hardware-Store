@@ -9,6 +9,29 @@
       Title="SubcategoriesPage">
 
     <Grid>
-        
+        <Grid.Resources>
+            <Style TargetType="ListBox">
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+            <ListBox Name="ListBoxSubcategories"
+                     FontSize="17pt">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Padding" Value="20"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+        </StackPanel>
     </Grid>
 </Page>
