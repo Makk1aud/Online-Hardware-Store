@@ -11,7 +11,7 @@ namespace Online_hardware_store.DataApp
     {
         public static Window mainWindow {get; set;}
         public static Window subcategoriesWindow { get; set;}
-
+        public static Window listOfGoodsWindow { get; set;}
         public static void TransitionMainWindow()
         {
             if (Application.Current.MainWindow.Equals(mainWindow))

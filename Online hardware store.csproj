@@ -100,10 +100,17 @@
     <Compile Include="Pages\SubcategoriesWindowPages\SubcategoriesPage.xaml.cs">
       <DependentUpon>SubcategoriesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ListOfGoodsWindow.xaml.cs">
+      <DependentUpon>ListOfGoodsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\SubcategoriesWindow.xaml.cs">
       <DependentUpon>SubcategoriesWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\SubcategoriesWindowPages\SubcategoriesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ListOfGoodsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
