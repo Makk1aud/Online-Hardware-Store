@@ -35,8 +35,8 @@ namespace Online_hardware_store.Pages.GeneralPages
         {
             var newWindow = new SubcategoriesWindow((int)ListBoxCompanyTabs.SelectedValue);
             newWindow.Show();
-            MainWindowClass.mainWindow.Owner = newWindow;
-            MainWindowClass.mainWindow.Close();
+            WindowsClass.mainWindow.Owner = newWindow;
+            WindowsClass.mainWindow.Hide();
         }
     }
 }

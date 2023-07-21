@@ -7,8 +7,9 @@ using System.Windows;
 
 namespace Online_hardware_store.DataApp
 {
-    static class MainWindowClass
+    static class WindowsClass
     {
-        public static Window mainWindow;
+        public static Window mainWindow {get; set;}
+        public static Window subcategoriesWindow { get; set;}
     }
 }

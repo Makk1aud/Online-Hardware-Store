@@ -1,4 +1,5 @@
-﻿using Online_hardware_store.Pages.GeneralPages;
+﻿using Online_hardware_store.DataApp;
+using Online_hardware_store.Pages.GeneralPages;
 using Online_hardware_store.Pages.SubcategoriesWindowPages;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,8 @@ namespace Online_hardware_store.Windows
         public SubcategoriesWindow(int mainCategoryId)
         {
             InitializeComponent();
+            WindowsClass.subcategoriesWindow = this;
+            Application.Current.MainWindow = this;
             frameTopPanel.Navigate(new PageTopPanel());
             frameSubcategories.Navigate(new SubcategoriesPage(mainCategoryId));
         }

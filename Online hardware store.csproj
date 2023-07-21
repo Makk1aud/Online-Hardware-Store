@@ -96,7 +96,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\WindowClass.cs" />
-    <Compile Include="DataApp\MainWindowClass.cs" />
+    <Compile Include="DataApp\WindowsClass.cs" />
     <Compile Include="Pages\SubcategoriesWindowPages\SubcategoriesPage.xaml.cs">
       <DependentUpon>SubcategoriesPage.xaml</DependentUpon>
     </Compile>

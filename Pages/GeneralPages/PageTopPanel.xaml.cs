@@ -38,7 +38,12 @@ namespace Online_hardware_store.Pages.GeneralPages
 
         private void ButtonMainPage_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            MainWindowClass.mainWindow.Show();
+            if (Application.Current.MainWindow.Equals(WindowsClass.mainWindow))
+                return;
+            Application.Current.MainWindow.Hide();
+            WindowsClass.mainWindow.Owner = null;
+            Application.Current.MainWindow.Owner = WindowsClass.mainWindow;
+            WindowsClass.mainWindow.Show();
         }
     }
 }

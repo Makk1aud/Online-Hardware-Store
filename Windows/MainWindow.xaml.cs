@@ -28,7 +28,8 @@ namespace Online_hardware_store
         public MainWindow()
         {
             InitializeComponent();
-            MainWindowClass.mainWindow= this;
+            WindowsClass.mainWindow = this;
+            Application.Current.MainWindow = this;
             frameTopPanel.Navigate(new PageTopPanel());
             frameLeftPanel.Navigate(new PageLeftPanel());
             frameCompaniesPanel.Navigate(new PageListManufacturies());
