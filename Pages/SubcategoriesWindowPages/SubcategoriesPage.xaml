@@ -23,9 +23,13 @@
             </Style>
         </Grid.Resources>
         <StackPanel HorizontalAlignment="Left"
-                    VerticalAlignment="Top">
+                    VerticalAlignment="Top"
+                    Margin="20">
             <ListBox Name="ListBoxSubcategories"
-                     FontSize="17pt">
+                     FontSize="17pt"
+                     ScrollViewer.CanContentScroll="False"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     Width="80">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="Padding" Value="20"/>
