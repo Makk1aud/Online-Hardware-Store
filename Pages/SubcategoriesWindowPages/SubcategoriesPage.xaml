@@ -27,9 +27,7 @@
                     Margin="20">
             <ListBox Name="ListBoxSubcategories"
                      FontSize="17pt"
-                     ScrollViewer.CanContentScroll="False"
-                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                     Width="80">
+                     ScrollViewer.CanContentScroll="False">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="Padding" Value="20"/>
