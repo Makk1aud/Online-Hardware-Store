@@ -11,5 +11,15 @@ namespace Online_hardware_store.DataApp
     {
         public static Window mainWindow {get; set;}
         public static Window subcategoriesWindow { get; set;}
+
+        public static void TransitionMainWindow()
+        {
+            if (Application.Current.MainWindow.Equals(mainWindow))
+                return;
+            Application.Current.MainWindow.Hide();
+            mainWindow.Owner = null;
+            Application.Current.MainWindow.Owner = mainWindow;
+            mainWindow.Show();
+        }
     }
 }

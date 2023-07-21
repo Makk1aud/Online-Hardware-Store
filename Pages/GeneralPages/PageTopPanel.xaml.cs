@@ -31,19 +31,9 @@ namespace Online_hardware_store.Pages.GeneralPages
 
         }
 
-        private void ButtonMainPage_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ButtonMainPage_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Application.Current.MainWindow.Equals(WindowsClass.mainWindow))
-                return;
-            Application.Current.MainWindow.Hide();
-            WindowsClass.mainWindow.Owner = null;
-            Application.Current.MainWindow.Owner = WindowsClass.mainWindow;
-            WindowsClass.mainWindow.Show();
+            WindowsClass.TransitionMainWindow();
         }
     }
 }
