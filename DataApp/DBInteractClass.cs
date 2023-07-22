@@ -16,7 +16,7 @@ namespace Online_hardware_store.DataApp
         public static string conString = "SERVER=LOCALHOST;DATABASE=online hardware store;UID=makklaud;PASSWORD=UAZ9233;";
         private static MySqlConnection con = new MySqlConnection(conString);
 
-        public static void ConnectionOpen()
+        public static void CheckConnection()
         {
             try 
             { 
@@ -29,7 +29,33 @@ namespace Online_hardware_store.DataApp
             }
         }
 
-        public static string DbPullData(string query)
+        public static void OpenConnection()
+        {
+            try
+            {
+                con.Open();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        public static void CloseConnection()
+        {
+            try
+            {
+                con.Close();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        public static MySqlDataReader DbPullReader(string query)
+        {
+            OpenConnection();
+            var command = new MySqlCommand(query, con);
+            var reader = command.ExecuteReader();
+            return reader;
+        }
+
+        public static string DbPullStringData(string query)
         {
             con.Open();
             try

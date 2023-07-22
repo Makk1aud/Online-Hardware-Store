@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Online_hardware_store.DataApp;
+using Online_hardware_store.Pages.GeneralPages;
+using Online_hardware_store.Pages.ListOfGoodsPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +25,10 @@ namespace Online_hardware_store.Windows
         public ListOfGoodsWindow()
         {
             InitializeComponent();
+            WindowsClass.listOfGoodsWindow = this;
+            Application.Current.MainWindow = this;
+            frameTopPanel.Navigate(new PageTopPanel());
+            frameSortPanel.Navigate(new PageSortOfGoods());
         }
     }
 }

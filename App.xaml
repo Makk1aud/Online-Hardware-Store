@@ -16,5 +16,10 @@
             <Setter Property="Height" Value="150"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
+
+        <Style TargetType="CheckBox" x:Key="CheckBoxSortPage">
+            <Setter Property="FontSize" Value="16pt"/>
+            
+        </Style>
     </Application.Resources>
 </Application>

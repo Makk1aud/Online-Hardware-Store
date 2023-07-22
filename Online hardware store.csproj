@@ -97,6 +97,9 @@
     </ApplicationDefinition>
     <Compile Include="Classes\WindowClass.cs" />
     <Compile Include="DataApp\WindowsClass.cs" />
+    <Compile Include="Pages\ListOfGoodsPages\PageSortOfGoods.xaml.cs">
+      <DependentUpon>PageSortOfGoods.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SubcategoriesWindowPages\SubcategoriesPage.xaml.cs">
       <DependentUpon>SubcategoriesPage.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
     <Compile Include="Windows\SubcategoriesWindow.xaml.cs">
       <DependentUpon>SubcategoriesWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\ListOfGoodsPages\PageSortOfGoods.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SubcategoriesWindowPages\SubcategoriesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

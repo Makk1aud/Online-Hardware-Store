@@ -22,18 +22,29 @@
                 </Setter>
             </Style>
         </Grid.Resources>
-        <StackPanel HorizontalAlignment="Left"
+        <WrapPanel Orientation="Horizontal"
+                   ItemHeight="80"
+                   ItemWidth="140"
+                   Width="200"
+                   Height="400"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="20"
+                   Name="WrapPanelSubcategories">
+        </WrapPanel>
+        <!--<StackPanel HorizontalAlignment="Left"
                     VerticalAlignment="Top"
                     Margin="20">
             <ListBox Name="ListBoxSubcategories"
                      FontSize="17pt"
-                     ScrollViewer.CanContentScroll="False">
+                     ScrollViewer.CanContentScroll="False"
+                     SelectionChanged="ListBoxSubcategories_SelectionChanged">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="Padding" Value="20"/>
                     </Style>
                 </ListBox.ItemContainerStyle>
             </ListBox>
-        </StackPanel>
+        </StackPanel>-->
     </Grid>
 </Page>
