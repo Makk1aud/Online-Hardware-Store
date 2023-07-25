@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Online_hardware_store"
              StartupUri="./Windows/MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="TextBlock" x:Key="DefaultStyleTextBox">
+        <Style TargetType="TextBox" x:Key="DefaultStyleTextBox">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="FontSize" Value="16pt"/>
@@ -19,7 +19,11 @@
 
         <Style TargetType="CheckBox" x:Key="CheckBoxSortPage">
             <Setter Property="FontSize" Value="16pt"/>
-            
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TextBlockNearText">
+            <Setter Property="FontSize" Value="14pt"/>
+            <Setter Property="Margin" Value="5"/>
         </Style>
     </Application.Resources>
 </Application>

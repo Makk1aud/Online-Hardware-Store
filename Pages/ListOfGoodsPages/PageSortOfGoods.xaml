@@ -12,7 +12,7 @@
         <StackPanel VerticalAlignment="Top"
                     HorizontalAlignment="Left"
                     Margin="20">
-            <Menu >
+            <Menu>
                 <MenuItem Header="V Наличие в магазинах"
                           FontSize="16pt"
                           StaysOpenOnClick="True">
@@ -26,7 +26,42 @@
             </Menu>
             <CheckBox Name="CheckBoxRating"
                       Content="Рейнтинг 4 и выше"
-                      Style="{StaticResource CheckBoxSortPage}" />
+                      Style="{StaticResource CheckBoxSortPage}"
+                      Margin="10"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="От" 
+                       Style="{StaticResource TextBlockNearText}"/>
+                <TextBox Name="TextBoxPriceFrom"
+                         FontSize="16pt"
+                         Height="30"
+                         Width="100"/>
+                
+                <TextBlock Text="До" 
+                       Style="{StaticResource TextBlockNearText}"/>
+                <TextBox Name="TextBoxPriceUpTo"
+                         FontSize="16pt"
+                         Height="30"
+                         Width="100"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left">
+                <TextBox Name="TextBoxSearchCompany"
+                         Style="{StaticResource DefaultStyleTextBox}"/>
+                <DataGrid Name="DataGridCompanies"
+                          IsReadOnly="True"
+                          CanUserAddRows="False"
+                          AutoGenerateColumns="False"
+                          Height="50"
+                          Width="244"
+                          Margin="5"
+                          HeadersVisibility="None">
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Width="5*"/>
+                        <DataGridTextColumn 
+                            Binding="{Binding Path=manufac_name }"
+                            Width="20*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

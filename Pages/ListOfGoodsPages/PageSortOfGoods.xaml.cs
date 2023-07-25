@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Online_hardware_store.DataApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace Online_hardware_store.Pages.ListOfGoodsPages
         public PageSortOfGoods()
         {
             InitializeComponent();
+            //запрос с подкатегорией
+            DataGridCompanies.ItemsSource = DBInteractClass.DbPullStringData("select * from ")
         }
     }
 }
